@@ -1,5 +1,5 @@
 import React from 'react';
-import { Logo, SearchIcon, HamburgerIconDesktop } from '../Assets/Images/Icon';
+import { Logo, SearchIcon, HamburgerIconDesktop, HamburgerIconMobile,  } from '../Assets/Images/Icon';
 import NavbarItem from './NavbarItem/NavbarItem';
 function Header() {
 	const navbarList = [
@@ -32,9 +32,10 @@ function Header() {
 					<ul className='hidden md:flex items-center gap-[75px]'>{navbarList.map(item => <NavbarItem key={item.id} item={item}/>)}</ul>
 					<div className="flex items-center gap-[32px]">
 						<button className='hidden sm:block'><SearchIcon/></button>
-						<button className=''><HamburgerIconDesktop/></button>
+						<button className='hidden sm:block'><HamburgerIconDesktop/></button>
+						<button className="sm:hidden"><HamburgerIconMobile/></button>
 					</div>
-				</div>
+				</div> 
 			</div>
 		</header>
 	)
